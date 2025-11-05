@@ -24,6 +24,14 @@ router.get('/search_result', function (req, res) {
     res.send("You searched for " + req.query.search_text + " in " + req.query.cat_text);
  });
 
+ router.get("/register", (req,res) => {
+    res.render("register.ejs",  shopData); 
+}); 
+ 
+router.post("/registered", (req, res) => {
+  res.send('Hello ' + req.body.first + ' ' + req.body.last + ' you are now registered!' + req.body.email);
+});
+
 
 // Export the router object so index.js can access it
 module.exports = router;
