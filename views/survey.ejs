@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %> - Survey</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/search">Search</a>
+        <a href="/register">Register</a>
+        <a href="/survey">Survey</a>
+      </nav>
+    </header>
+
+    <h1>Customer Survey</h1>
+
+    <% if (typeof survey === 'undefined') { %>
+      <!-- Show the form -->
+      <div class="survey-box">
+        <form method="POST" action="/survey">
+          <label for="first">First name:</label>
+          <input id="first" type="text" name="first" required>
+
+          <label for="last">Surname:</label>
+          <input id="last" type="text" name="last" required>
+
+          <label for="email">Email address:</label>
+          <input id="email" type="email" name="email" required>
+
+          <label for="age">How old are you?</label>
+          <input id="age" type="number" name="age" min="0" required>
+
+          <p>Which of the following drinks categories do you consume?</p>
+          <div class="survey-options">
+            <% productCategories.forEach(function(cat) { %>
+              <label>
+                <input type="radio" name="category" value="<%= cat %>" required>
+                <%= cat %>
+              </label>
+            <% }) %>
+          </div>
+
+          <p>Are you a student?</p>
+          <label>
+            <input type="checkbox" name="isStudent" value="yes"> Yes
+          </label>
+
+          <input type="submit" value="Submit survey">
+        </form>
+      </div>
+
+    <% } else { %>
+      <!-- Show the result -->
+      <div class="result-box">
+        <p>Thank you, <strong><%= survey.first %> <%= survey.last %></strong>!</p>
+        <p>We’ve recorded your details:</p>
+
+        <ul>
+          <li><strong>Email:</strong> <%= survey.email %></li>
+          <li><strong>Age:</strong> <%= survey.age %></li>
+          <li><strong>Favourite drink category:</strong> <%= survey.category %></li>
+          <li><strong>Student:</strong> <%= survey.isStudent %></li>
+        </ul>
+
+        <p>Your feedback helps us improve our range at <strong><%= shopName %></strong>!</p>
+
+        <a href="/survey" class="btn">Take another survey</a>
+      </div>
+    <% } %>
+  </body>
+</html>

@@ -2,16 +2,28 @@
 <html>
   <head>
     <title>Search Page</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>Search for what ever you may need at <%= shopName %> </h1>
-    <p>We sell all sorts of drinks</p>
+    <header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/search">Search</a>
+        <a href="/register">Register</a>
+        <a href="/survey">Survey</a>
+      </nav>
+  </header>
+    <h1>Search Page</h1>
+    <h2>Search for what ever you may need at <%= shopName %> </h2>
     
-    <form action="/search_result" method="GET">
-      <input id="search_box" type="text" name="search_text">
-      <input id="cat_box" type="text" name="cat_text">
-      <input type="submit" value="OK" >
-    </form>
+<div class="search-box">
+  <form action="/search_result" method="GET">
+    <input id="search_box" type="text" name="search_text" placeholder="Search..." required>
+    <input id="cat_box" type="text" name="cat_text" placeholder="Category...">
+    <input type="submit" value="OK">
+  </form>
+</div>
 
   </body>
 </html>

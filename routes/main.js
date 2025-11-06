@@ -43,6 +43,30 @@ router.post("/registered", (req, res) => {
   res.send('Hello ' + req.body.first + ' ' + req.body.last + ' you are now registered!' + req.body.email);
 });
 
+// Survey page (GET)
+router.get('/survey', (req, res) => {
+  res.render('survey.ejs', { shopName: shopData.shopName, productCategories: shopData.productCategories });
+});
+
+// Survey submission (POST)
+router.post('/survey', (req, res) => {
+  const surveyData = {
+    first: req.body.first,
+    last: req.body.last,
+    email: req.body.email,
+    age: req.body.age,
+    category: req.body.category,
+    isStudent: req.body.isStudent ? 'Yes' : 'No'
+  };
+
+  res.render('survey.ejs', {
+    shopName: shopData.shopName,
+    productCategories: shopData.productCategories,
+    survey: surveyData
+  });
+});
+
+
 
 // Export the router object so index.js can access it
 module.exports = router;
