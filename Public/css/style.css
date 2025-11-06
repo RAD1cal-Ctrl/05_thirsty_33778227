@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  background-color: #007acc;
+  text-align: center;
+  padding: 20px 0;
+  margin: 40px 0;
+  border-radius: 10px;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style-type: none;      /* remove default bullet points */
+  padding: 0;                 /* remove left padding */
+  margin: 0 auto;             /* center the list container */
+  max-width: 300px;           /* keep it nicely narrow */
+  text-align: left;           /* align the items inside the box */
+}
+
+ul li {
+  background-color: #f2f2f2;  /* soft grey background for each item */
+  margin: 8px 0;              /* space between items */
+  padding: 10px 15px;         /* internal spacing */
+  border-radius: 6px;         /* rounded corners */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+ul li:hover {
+  background-color: #e6e6e6;  /* subtle hover feedback */
+}
