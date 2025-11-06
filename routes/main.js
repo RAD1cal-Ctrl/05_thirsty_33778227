@@ -2,8 +2,19 @@
 const express = require("express");
 const router = express.Router();
 // Define our data
-var shopData = {shopName: "The Thirsty Student", 
-                productCategories:["Beer", "Wine", "Soft Drinks", "Hot Drinks"]};
+var shopData = {shopName: "Thirsty Student Shop",
+                productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
+  shops: [
+    {name: "Central Shop",
+      manager: "Sarah Collins",
+      address: "123 Main Street, Dublin"},
+    {name: "Riverside Shop",
+      manager: "Mark O’Brien",
+      address: "25 River Road, Waterford"},
+    {name: "Goldsmiths Campus",
+      manager: "Emily Donell",
+      address: "Goldsmiths University, London"}]};
+
 
 // Handle the main routes
 router.get('/',function(req,res){

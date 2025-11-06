@@ -44,3 +44,65 @@ ul li {
 ul li:hover {
   background-color: #e6e6e6;  /* subtle hover feedback */
 }
+
+.about-box {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-box p {
+  margin: 0;
+}
+
+header {
+  background-color: #007acc;
+  padding: 10px 0;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #e0e0e0;
+}
+
+.shops-list {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.shop-card {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  font-family: 'Poppins', sans-serif;
+}
+
+.shop-card h3 {
+  color: #007acc;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.shop-card p {
+  margin: 3px 0;
+  color: #444;
+}

@@ -2,9 +2,23 @@
 <html>
   <head>
     <title>The Thirsty Student</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
-    <h1>About <%= shopName %> Shop</h1>
-    <p>We sell all sorts of drinks</p>
+    <h1>About <%= shopName %> Shop</h1><div class="about-box">
+      <p>We sell all sorts of drinks — from refreshing soft beverages to premium wines and craft beers.</p>
+    </div>
+    <h2>Our Shop Locations</h2>
+
+    <div class="shops-list">
+      <% shops.forEach(function(shop) { %>
+        <div class="shop-card">
+          <h3><%= shop.name %></h3>
+          <p><strong>Manager:</strong> <%= shop.manager %></p>
+          <p><strong>Address:</strong> <%= shop.address %></p>
+        </div>
+      <% }) %>
+    </div>
+
   </body>
 </html>
