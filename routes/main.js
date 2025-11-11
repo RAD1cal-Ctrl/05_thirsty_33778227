@@ -30,18 +30,24 @@ router.get("/search", (req, res) => {
     res.render("search.ejs", shopData)
 }); 
 
-router.get('/search_result', function (req, res) {
-    // TODO: search in the database
-    res.send("You searched for " + req.query.search_text + " in " + req.query.cat_text);
- });
+router.get('/search_result', (req, res) => {
+  const data = {
+    ...shopData,
+    search: {text: req.query.search_text,category: req.query.cat_text
+  }};
+  res.render('search.ejs', data);
+});
+
 
  router.get("/register", (req,res) => {
     res.render("register.ejs",  shopData); 
 }); 
  
-router.post("/registered", (req, res) => {
-  res.send('Hello ' + req.body.first + ' ' + req.body.last + ' you are now registered!' + req.body.email);
+router.post('/registered', (req, res) => {
+  const registered = {first: req.body.first,last: req.body.last,email: req.body.email};
+  res.render('register.ejs', { ...shopData, registered });
 });
+
 
 // Survey page (GET)
 router.get('/survey', (req, res) => {

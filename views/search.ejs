@@ -24,6 +24,19 @@
     <input type="submit" value="OK">
   </form>
 </div>
+<% if (typeof search !== 'undefined') { %>
+  <div class="result-box">
+    <p>
+      You searched for <strong><%= search.text %></strong>
+      <% if (search.category && search.category.trim() !== '') { %>
+        in <strong><%= search.category %></strong>.
+      <% } else { %>
+        in <strong>All categories</strong>.
+      <% } %>
+    </p>
+  </div>
+<% } %>
+
 
   </body>
 </html>

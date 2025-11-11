@@ -210,3 +210,40 @@ nav a:hover {
 .register-box input[type="submit"]:hover {
   background-color: #005fa3;
 }
+
+/* Search resultm */
+.result-box{
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Register results */
+.result-box{
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.btn{
+  display: inline-block;
+  background-color: #007acc;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+.btn:hover{ background-color:#005fa3; }

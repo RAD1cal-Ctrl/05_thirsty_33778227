@@ -14,19 +14,32 @@
         <a href="/survey">Survey</a>
       </nav>
   </header>
-<div class="register-box">
-      <form method="POST" action="/registered"> 
-        <label for="first">First Name:</label>
-        <input id="first" type="text" name="first" required>
+  
+  <h1>Register</h1>
 
-        <label for="last">Last Name:</label>
-        <input id="last" type="text" name="last" required>
+    <% if (typeof registered === 'undefined') { %>
+      <div class="register-box">
+        <form method="POST" action="/registered">
+          <label for="first">First Name:</label>
+          <input id="first" type="text" name="first" required>
 
-        <label for="email">Email:</label>
-        <input id="email" type="email" name="email" required>
+          <label for="last">Last Name:</label>
+          <input id="last" type="text" name="last" required>
 
-        <input type="submit" value="OK"> 
-      </form> 
-    </div>
-</body>  
-</html> 
+          <label for="email">Email:</label>
+          <input id="email" type="email" name="email" required>
+
+          <input type="submit" value="OK">
+        </form>
+      </div>
+    <% } else { %>
+      <div class="result-box">
+        <p>
+          Hello <strong><%= registered.first %> <%= registered.last %></strong>!<br>
+          You are now registered with <strong><%= registered.email %></strong>.
+        </p>
+        <a href="/register" class="btn">Register another</a>
+      </div>
+    <% } %>
+  </body>
+</html>
