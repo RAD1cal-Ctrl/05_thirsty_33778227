@@ -30,13 +30,17 @@ router.get("/search", (req, res) => {
     res.render("search.ejs", shopData)
 }); 
 
-router.get('/search_result', (req, res) => {
-  const data = {
+// copied from ChatGPT
+router.get("/search_result", (req, res) => {
+  res.render("search.ejs", {
     ...shopData,
-    search: {text: req.query.search_text,category: req.query.cat_text
-  }};
-  res.render('search.ejs', data);
+    search: {
+      text: req.query.search_text || "",
+      category: req.query.cat_text || ""
+    }
+  });
 });
+
 
 
  router.get("/register", (req,res) => {
