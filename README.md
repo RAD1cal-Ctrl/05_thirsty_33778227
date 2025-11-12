@@ -1,4 +1,6 @@
-# Thirsty Student Shop
+## VM note
+The Goldsmiths VM dosn't seem to run my web app an intended but locally the app renders as intended.
+i have added screenshots of them in the repo files# Thirsty Student Shop
 
 Express + EJS demo app for Dynamic Web Applications.
 
